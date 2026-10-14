@@ -254,6 +254,10 @@ int LinkedList::deleteValue(ModernData targetValue) {
 }
 
 int LinkedList::printList() {
+    if (headPtr == nullptr) {
+        return -1;
+    }
+
     classNodeVariant* currentPtr = headPtr;
 
     while (currentPtr != nullptr) {
@@ -263,7 +267,7 @@ int LinkedList::printList() {
 
     std::cout << std::endl;
 
-    return counter;
+    return 0;
 }
 
 int LinkedList::listLength() {
